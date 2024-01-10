@@ -4,39 +4,24 @@ import { SlidersEnum } from "../enums/SlidersEnum";
 class FiltersPO {
   private page: Page;
 
-  // Full list of locators
+  // List of locators
   private clearButton = 'button[data-testid="filtersForm-resetFilters-button"]';
   private doneButton = 'button[data-testid="filtersForm-applyFilters-button"]';
-  private filtersButton =
-    'button[data-testid="resultPage-toggleFiltersButton-button"]';
+  private filtersButton = 'button[data-testid="resultPage-toggleFiltersButton-button"]';
   private allFilters = 'div[data-testid="resultPage-searchFilters-content"]';
-  private clearAllAirlinesButton =
-    'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(1)';
-  private selectAllAirlinesButton =
-    'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(2)';
+  private clearAllAirlinesButton = 'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(1)';
+  private selectAllAirlinesButton = 'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(2)';
   private americanAirlinesCheckbox = "input#airlines-AA";
   private nonStopButton = 'label[data-testid="MAX_STOPS-direct"]';
   private maxOneStopButton = 'label[data-testid="MAX_STOPS-max1"]';
   private allStopsButton = 'label[data-testid="MAX_STOPS-all"]';
-  private departureGoRadioButton = "input#departure-0";
-  private departureReturnRadioButton = "input#departure-1";
   private arrivalGoRadioButton = "input#arrival-0";
-  private arrivalReturnRadioButton =
-    'input[data-testid="resultPage-departureArrivalFilter-arrival1-radio"]';
-  private goSliderButtonMin =
-    'div[data-testid="resultPage-departureArrivalFilter-departure0-slider"] div[data-testid="handle-0"]';
-  private goSliderButtonMax =
-    'div[data-testid="resultPage-departureArrivalFilter-departure0-slider"] div[data-testid="handle-1"]';
-  private returnSliderButtonMin =
-    'div[data-testid="resultPage-departureArrivalFilter-departure1-slider"] div[data-testid="handle-0"]';
-  private returnSliderButtonMax =
-    'div[data-testid="resultPage-departureArrivalFilter-departure1-slider"] div[data-testid="handle-1"]';
-  private travelTimeSliderButton =
-    'div[data-testid="resultPage-TRAVEL_TIMEFilter-content"] div[data-testid="handle-0"]';
-  private priceSliderButtonMin =
-    'div[data-testid="resultPage-PRICEFilter-content"] div[data-testid="handle-0"]';
-  private priceSliderButtonMax =
-    'div[data-testid="resultPage-PRICEFilter-content"] div[data-testid="handle-1"]';
+  private arrivalReturnRadioButton = 'input[data-testid="resultPage-departureArrivalFilter-arrival1-radio"]';
+  private goSliderButtonMax = 'div[data-testid="resultPage-departureArrivalFilter-departure0-slider"] div[data-testid="handle-1"]';
+  private returnSliderButtonMin = 'div[data-testid="resultPage-departureArrivalFilter-departure1-slider"] div[data-testid="handle-0"]';
+  private travelTimeSliderButton = 'div[data-testid="resultPage-TRAVEL_TIMEFilter-content"] div[data-testid="handle-0"]';
+  private priceSliderButtonMin = 'div[data-testid="resultPage-PRICEFilter-content"] div[data-testid="handle-0"]';
+  private priceSliderButtonMax = 'div[data-testid="resultPage-PRICEFilter-content"] div[data-testid="handle-1"]';
 
   constructor(page: Page) {
     this.page = page;

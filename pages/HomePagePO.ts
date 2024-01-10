@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { BaseActions } from '../utilities/BaseActions';
+import { BaseActions } from '../utils/Base';
 import { Travel } from '../dtos/Travel';
 
 export class HomePagePO extends BaseActions {
@@ -16,7 +16,6 @@ export class HomePagePO extends BaseActions {
     private searchFlightBanner = 'div[data-testid="searchPage-searchForm"]';
     private acceptTermsButton = 'button[data-testid="cookieBanner-confirmButton"]';
     private destinationDropdown = 'div[data-testid="etiDropdownOption"]';
-    private calendar = 'div.DayPicker';
     private chooseMonthArrow = 'button[data-testid="searchForm-nextMonth-input"]';
     private calendarMonthText = 'div.DayPicker-Caption';
 

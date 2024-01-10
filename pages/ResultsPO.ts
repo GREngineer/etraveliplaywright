@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import { BaseActions } from "../utilities/BaseActions";
+import { BaseActions } from "../utils/Base";
 
 export class ResultsPO extends BaseActions {
   page: Page;
@@ -9,18 +9,15 @@ export class ResultsPO extends BaseActions {
     this.page = page;
   }
 
-  // Define all selectors
+  // Define selectors
   private clearButton = 'button[data-testid="filtersForm-resetFilters-button"]';
   private doneButton = 'button[data-testid="filtersForm-applyFilters-button"]';
-  private filtersButton =
-    'button[data-testid="resultPage-toggleFiltersButton-button"]';
-  private allFilters = 'div[data-testid="resultPage-searchFilters-content"]';
+  private filtersButton = 'button[data-testid="resultPage-toggleFiltersButton-button"]';
+  
 
   // Airlines
-  private clearAllAirlinesButton =
-    'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(1)';
-  private selectAllAirlinesButton =
-    'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(2)';
+  private clearAllAirlinesButton = 'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(1)';
+  private selectAllAirlinesButton = 'div[data-testid="resultPage-AIRLINESFilter-content"] span:nth-child(2)';
   private americanAirlinesCheckbox = "input#airlines-AA";
 
   // Number of stops
@@ -29,11 +26,8 @@ export class ResultsPO extends BaseActions {
   private allStopsButton = 'label[data-testid="MAX_STOPS-all"]';
 
   // Departure - Arrival times
-  private departureGoRadioButton = "input#departure-0";
-  private departureReturnRadioButton = "input#departure-1";
   private arrivalGoRadioButton = "input#arrival-0";
-  private arrivalReturnRadioButton =
-    'input[data-testid="resultPage-departureArrivalFilter-arrival1-radio"]';
+  private arrivalReturnRadioButton = 'input[data-testid="resultPage-departureArrivalFilter-arrival1-radio"]';
 
   // Clicks Filter Button and opens filter menu
   public async clickFiltersButton(): Promise<void> {

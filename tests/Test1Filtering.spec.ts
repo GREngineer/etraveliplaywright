@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
-import { HomePagePO } from "../../pageObjects/HomePagePO";
-import { ResultsPO } from "../../pageObjects/ResultsPO";
-import { FiltersPO } from "../../pageObjects/FiltersPO";
-import { Travel } from "../../dtos/Travel";
-import { SlidersEnum } from "../../enums/SlidersEnum";
+import { HomePagePO } from "../pages/HomePagePO";
+import { ResultsPO } from "../pages/ResultsPO";
+import { FiltersPO } from "../pages/FiltersPO";
+import { Travel } from "../dtos/Travel";
+import { SlidersEnum } from "../enums/SlidersEnum";
 
 test.describe("Test1Filtering", () => {
   let homepage: HomePagePO;
